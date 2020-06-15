@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="budaya"
+            type="id.co.myproject.tugasbesar.model.Budaya" />
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_circle"
+            app:imageUrl="@{budaya.gambar}"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{budaya.namaBudaya}"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</layout>

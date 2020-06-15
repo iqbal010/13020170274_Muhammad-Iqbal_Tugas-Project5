@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="user"
+            type="id.co.myproject.tugasbesar.model.User" />
+    </data>
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.ProfilFragment"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="60dp"
+            android:elevation="10dp"
+            app:imageUrl="@{user.foto}"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.nama}"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="@{user.email}"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:text="@{user.alamat}"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Edit Data"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button_login"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:id="@+id/btn_log_out"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button_login"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"/>
+    </LinearLayout>
+</layout>
